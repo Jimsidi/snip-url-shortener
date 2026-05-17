@@ -29,6 +29,8 @@ async def init_db():
             _shared_conn = await aiosqlite.connect(":memory:")
         conn = _shared_conn
     else:
+        # Ensure the directory exists before connecting
+        os.makedirs(os.path.dirname(DB_PATH), exist_ok=True) if os.path.dirname(DB_PATH) else None
         conn = await aiosqlite.connect(DB_PATH)
 
     await conn.execute("""
