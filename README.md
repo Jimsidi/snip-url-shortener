@@ -8,15 +8,17 @@ A minimal, production-ready URL shortener built with **FastAPI + Python**, conta
 
 ## 🧱 Architecture
 
-Browser
-│
-▼
-[ Render (FastAPI) ]  ◄──── GitHub Actions deploys on push to main
-│
-├── POST /api/shorten      → generate short code, store in SQLite
-├── GET  /{code}           → look up and redirect
-├── GET  /api/stats/{code} → click analytics
-└── GET  /health           → uptime check
+```
+ Browser
+    |
+    v
+[ Render (FastAPI) ]  <---- GitHub Actions deploys on push to main
+    |
+    |-- POST /api/shorten      -> generate short code, store in SQLite
+    |-- GET  /{code}           -> look up and redirect
+    |-- GET  /api/stats/{code} -> click analytics
+    +-- GET  /health           -> uptime check
+```
 
 ---
 
