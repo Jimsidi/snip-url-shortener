@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Snip — URL Shortener</title>
+  <title>Snip &mdash; URL Shortener</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -284,7 +284,7 @@
       <label for="custom-input">Custom code <span style="color:#444;font-size:0.65rem;">(optional, min 3 chars)</span></label>
       <input type="text" id="custom-input" placeholder="e.g. my-link" style="margin-bottom:8px;" />
 
-      <button id="shorten-btn" onclick="shortenUrl()">Shorten →</button>
+      <button id="shorten-btn" onclick="shortenUrl()">Shorten &rarr;</button>
 
       <div class="error" id="error-box"></div>
 
@@ -305,7 +305,7 @@
     </div>
 
     <footer>
-      built with FastAPI + Python &nbsp;·&nbsp;
+      built with FastAPI + Python &nbsp;&middot;&nbsp;
       <a href="https://jimsidi.github.io" target="_blank">@jimsidi</a>
     </footer>
   </div>
@@ -365,7 +365,7 @@
         showError('Network error. Is the server running?');
       } finally {
         btn.disabled = false;
-        btn.textContent = 'Shorten →';
+        btn.textContent = 'Shorten \u2192';
       }
     }
 
