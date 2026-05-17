@@ -6,5 +6,5 @@ services:
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DB_PATH
-        value: /opt/render/project/src/snip.db
+        value: /tmp/snip.db
     healthCheckPath: /health
